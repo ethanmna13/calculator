@@ -97,9 +97,15 @@ class Calculator
   end
 
   def try_again
-    puts 'Would you like to use this function again? (Y/N): '
-    response = gets.chomp.upcase
-    response == 'Y' ? yield : main_menu if %w[Y N].include?(response)
+    loop do
+      puts 'Would you like to use this function again? (Y/N): '
+      response = gets.chomp.upcase
+      case response
+      when 'Y' then yield
+      when 'N' then main_menu
+      else puts 'Please enter Y or N only.'
+      end
+    end
   end
 
   def goodbye
