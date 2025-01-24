@@ -1,4 +1,5 @@
 # this is a calculator
+=begin
 class Calculator
   def main_menu
     puts 'Welcome to the Calculator App!'
@@ -173,5 +174,5 @@ class Calculator
       end
     end
   end
-  main_menu
 end
+=end
